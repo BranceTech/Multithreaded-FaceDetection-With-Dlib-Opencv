@@ -20,7 +20,7 @@ private:
 public:
     DetectFacedlib() ;
     cv::Mat detectfaces(cv::Mat & frame){
-        deserialize("/home/nano/Workspace/people/collince/web_cam/shape_predictor_68_face_landmarks.dat") >> shape_model;
+        deserialize("/PATH/TO/shape_predictor_68_face_landmarks.dat") >> shape_model;
 
         array2d<bgr_pixel> dlib_image;
         assign_image(dlib_image, cv_image<bgr_pixel>(frame));
